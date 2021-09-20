@@ -1,28 +1,44 @@
-
 baseURL: https://thomasgf-portfolio2021.netlify.app/
 languageCode: en-us
-title: Forty
-theme: kross-hugo
+title: vex-hugo
+theme: vex-hugo
 googleAnalytics: ''
 disqusShortname: ''
+
 
 menu:
   main: 
     - URL : about
-      name : About
+      name : About Me
       weight : 1
     - URL : blogs
-      name : Blog
+      name : My CV
       weight : 2
     - URL : posts
-      name : Posts
+      name : My Work
       weight : 3
     - URL : contact 
       name : Contact
       weight : 4
 
 params:
-  theme_color : #41228e
+  plugins:
+    css:
+      - link: >-
+          https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700
+      - link: plugins/bootstrap/bootstrap.min.css
+      - link: plugins/themefisher-font/themefisher-font.min.css
+      - link: plugins/slick/slick.min.css
+      - link: 'https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css'
+    js:
+      - link: plugins/jquery/jquery.js
+      - link: plugins/bootstrap/bootstrap.min.js
+      - link: plugins/slick/slick.min.js
+      - link: 'https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js'
+  logo: images/logo.png
+  logo_width: 100px
+
+ # theme_color : #41228e
   banner:
     buttonText: Get Started
     subtitle: |-
@@ -105,7 +121,7 @@ params:
         url: blogs/thomas
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
-        title: Tempus
+        title: CV
         url: blogs/tempus
       - image: pic03.jpg
         subtitle: Lorem Etiam Nullam

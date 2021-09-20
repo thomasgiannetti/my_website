@@ -1,0 +1,9 @@
+[submodule "themes/portio"]
+	path = themes/portio
+	url = git@github.com:StaticMania/portio-hugo.git
+[submodule "themes/roxo"]
+	path = themes/roxo
+	url = git@github.com:StaticMania/roxo-hugo.git
+[submodule "themes/vex-hugo"]
+	path = themes/vex-hugo
+	url = git@github.com:themefisher/vex-hugo.git

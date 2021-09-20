@@ -1,0 +1,34 @@
+############################# banner ############################
+banner:
+  enable : true
+  title : "My Portfolio Website"
+  content : "Hi, I'm Thomas. Welcome to my personal portfolio website ! Read about my work and myself. Enjoy."
+  image : "images/im01.JPG"
+about_product:
+  enable : true
+  #title : "Checkout Our All Products"
+  items:
+    - title : "About Me"
+      button: 
+        enable: true
+        label: "Find Out More About Me"
+        link: about
+    - title : "My CV"
+      button: 
+        enable: true
+        label: "Check out my CV"
+        link: blogs
+    - title : "My Work"
+      button: 
+        enable: true
+        label: "Examples of My Work"
+        link: posts
+    - title : "Contact"
+      button: 
+        enable: true
+        label: "Contact Me"
+        link: contact
+  button:
+   enable : true
+   label : "Contact Me"
+   link : contact
