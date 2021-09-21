@@ -36,6 +36,7 @@ params:
         title: London Business School
     buttonClear: Clear
     buttonSend: Send message
+    formEmail: thomasg.mam2022@london.edu
     email:
       - email: thomasg.mam2022@london.edu
         title: Email
