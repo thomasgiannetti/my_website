@@ -14,3 +14,6 @@ draft: false
 The goal of this project was to create a Deep Learning Model for nature language processing. We applied to tweets which discussed different types of energy around the world in order to showcase the evolution of sentiment towards those energies over the past years.
 
 To do so, we used Facebook's RoBERTa model, an optimised version of Google's BERT model. We scraped our data with TWINT and also added a live scraping option to our final website. 
+
+Find out more on our Github repository :
+https://github.com/contatc2/green_mood_tracker

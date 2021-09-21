@@ -1,7 +1,7 @@
 ---
 title: "Opinion Polls for 2021 German Elections"
 date: 2019-05-12T12:14:34+06:00
-image: "img/im01.jpg"
+image: "/Users/thomasgiannetti/my_website/static/img/im05.jpg"
 client: "John Doe"
 project_url : "https://themefisher.com/"
 categories: ["design","development"]
