@@ -10,3 +10,21 @@
 [submodule "vex-hugo"]
 	path = vex-hugo
 	url = git@github.com:themefisher/vex-hugo.git
+[submodule "themes/themes/showfolio"]
+	path = themes/themes/showfolio
+	url = https://github.com/apvarun/showfolio-hugo-theme.git
+[submodule "themes/KeepIt"]
+	path = themes/KeepIt
+	url = https://github.com/Fastbyte01/KeepIt.git
+[submodule "themes/terrassa"]
+	path = themes/terrassa
+	url = https://github.com/danielkvist/hugo-terrassa-theme.git
+[submodule "themes/kross-hugo"]
+	path = themes/kross-hugo
+	url = https://github.com/themefisher/kross-hugo.git
+[submodule "themes/raditian-free-hugo-theme"]
+	path = themes/raditian-free-hugo-theme
+	url = https://github.com/radity/raditian-free-hugo-theme.git
+[submodule "themes/themes/pulp"]
+	path = themes/themes/pulp
+	url = https://github.com/koirand/pulp.git

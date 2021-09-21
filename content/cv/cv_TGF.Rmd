@@ -1,0 +1,13 @@
+---
+title: "cv_TGF"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Hello this is my Cv
+#{{< embed-pdf url="static/cv/cv_TGF.pdf" >}}
+
+

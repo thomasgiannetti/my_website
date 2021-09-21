@@ -1,49 +1,31 @@
 baseURL: https://thomasgf-portfolio2021.netlify.app/
 languageCode: en-us
-title: vex-hugo
-theme: vex-hugo
+title: Forty
+theme: forty
 googleAnalytics: ''
 disqusShortname: ''
 
-
 menu:
-  main: 
-    - URL : about
-      name : About Me
-      weight : 1
-    - URL : blogs
-      name : My CV
-      weight : 2
-    - URL : posts
-      name : My Work
-      weight : 3
-    - URL : contact 
-      name : Contact
-      weight : 4
+ # main: 
+ #   - URL : about
+  #    name : About
+ #     weight : 1
+ #   - URL : blogs
+ #     name : Blog
+ #     weight : 2
+ #   - URL : posts
+ #     name : Posts
+ #     weight : 3
+ #   - URL : contact 
+#      name : contact
+ #     weight : 4
 
 params:
-  plugins:
-    css:
-      - link: >-
-          https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700
-      - link: plugins/bootstrap/bootstrap.min.css
-      - link: plugins/themefisher-font/themefisher-font.min.css
-      - link: plugins/slick/slick.min.css
-      - link: 'https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css'
-    js:
-      - link: plugins/jquery/jquery.js
-      - link: plugins/bootstrap/bootstrap.min.js
-      - link: plugins/slick/slick.min.js
-      - link: 'https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js'
-  logo: images/logo.png
-  logo_width: 100px
-
- # theme_color : #41228e
+  theme_color : #ff8c00
   banner:
     buttonText: Get Started
     subtitle: |-
-      A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-      AND RELEASED UNDER THE CREATIVE COMMONS.
+      Welcome to my portfolio website ! You can discover more about who I am and my work below.
     title: Hi, my name is Thomas
   blog: {}
   contact:
@@ -84,69 +66,63 @@ params:
       #  url: https://www.facebook.com
       - icon: fa-instagram
         label: Instagram
-        url: https://www.instagram.com
+        url: https://www.instagram.com/thomasgiannetti
       - icon: fa-github
         label: GitHub
-        url: https://www.github.com
+        url: https://www.github.com/thomasgiannetti
       - icon: fa-linkedin
         label: LinkedIn
-        url: https://www.linkedin.com
+        url: www.linkedin.com/in/thomas-giannetti
+        
   image: ''
   name: Your name
   navigation:
-    button1:
-      - name: Get Started
-        url: blogs
-    button2:
-      - name: Log In
-        url: '#'
-    links:
-      - name: Home
-        url: '#'
-      - name: Blogs
-        url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
-    menu: Menu
-    subtitle: By HTML5 Up
-    title: Forty
+#    button1:
+#      - name: Get Started
+#         url: blogs
+    #button2:
+     # - name: Log In
+     #   url: '#'
+  #  links:
+ #     - name: Home
+#        url: '#'
+#      - name: Blogs
+#        url: blogs
+#      - name: Generic Blog
+#        url: blogs/ipsum
+#      - name: Elements
+#        url: elements.html
+#    menu: Menu
+    
+    title: T.G.F.
   tiles:
     enable: yes
     showcase:
-      - image: pic01.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Who Am I ? 
-        url: blogs/thomas
-      - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
+      - image: im01.jpg
+        subtitle: Short biography
+        title: About Me
+        url: /about/who_am_i
+      - image: im02.jpg
+        subtitle: Examples of my work
+        title: Work
+        url: portfolio
+      - image: im03.jpg
+        subtitle: My resumé
         title: CV
-        url: blogs/tempus
-      - image: pic03.jpg
-        subtitle: Lorem Etiam Nullam
-        title: Magna
-        url: blogs/magna
-      - image: pic04.jpg
-        subtitle: Nisl Sed Aliquam
-        title: Ipsum
-        url: blogs/ipsum
-      - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
-        url: blogs/ipsum
-      - image: pic06.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Etiam
-        url: blogs/ipsum
-  two:
-    buttonText: Get Started
-    enable: yes
-    subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
-      \n    Mauris aliquet magna magna sed nunc rhoncus pharetra. \n    Pellentesque
-      condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia
-      pellentesque lorem ipsum dolor. \n    Nullam et orci eu lorem consequat tincidunt.
-      Vivamus et sagittis libero.\n    Mauris aliquet magna magna sed nunc rhoncus
-      amet pharetra et feugiat tempus."
-    title: Massa libero
-    url: blogs
+        url: /cv/cv_TGF
+     # - image: pic04.jpg
+     #   subtitle: Reach out to me
+      #  title: Contact
+     #   url: blogs/ipsum
+    
+  #two:
+  #  buttonText: Get Started
+  #  enable: yes
+  #  subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
+  #    \n    Mauris aliquet magna magna sed nunc rhoncus pharetra. \n    Pellentesque
+  #    condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia
+  #    pellentesque lorem ipsum dolor. \n    Nullam et orci eu lorem consequat tincidunt.
+  #    Vivamus et sagittis libero.\n    Mauris aliquet magna magna sed nunc rhoncus
+  #    amet pharetra et feugiat tempus."
+  #  title: Massa libero
+  #  url: blogs

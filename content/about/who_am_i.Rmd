@@ -1,0 +1,34 @@
+---
+title: "who_am_i"
+author: "Thomas Giannetti-Fakhoury"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Who am i?
+
+My name is **Thomas Giannetti-Fakhoury**, I am 22 years old and I was born in Cannes in the South of France. I am both **French** and **Ivorian** and am also of ***Lebanese*** and ***Italian*** origin.
+
+### My education & my work.
+
+I studied:
+
+1.  Finance at **Bocconi University**
+2.  FinTech during a Summer Programme at **Oxford University**
+3.  Data Science at **Le Wagon** in London
+
+
+![Education](/Users/thomasgiannetti/my_website/static/img/slide1.jpg)
+
+
+I worked: 
+
+1. As a Financial Analyst at **PFO Group**
+2. In Private Equity at **AfricInvest Group**
+3. As a TEDx Organiser with **TEDxTreichville**
+
+
+![Work](/Users/thomasgiannetti/my_website/static/img/slide2.jpg)
