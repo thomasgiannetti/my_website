@@ -109,7 +109,7 @@ params:
       - image: im03.jpg
         subtitle: My resumé
         title: CV
-        url: /cv/cv_TGF
+        url: /cv/cv_tgf
       - image: im09.jpg
         subtitle: Additional Information About Me
         title: Fun Fact

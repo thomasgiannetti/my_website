@@ -1,5 +1,5 @@
 ---
-title: "cv_TGF"
+title: "My CV"
 output: html_document
 ---
 
@@ -7,7 +7,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Hello this is my Cv
-#{{< embed-pdf url="static/cv/cv_TGF.pdf" >}}
+```{r picture, echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics("/img/CV.jpg", error = FALSE)
+```
 
+You can view and download my CV by clicking [here](https://drive.google.com/file/d/1pBdxlL3M-WGnqvHbLDS-5vVjEbLxfTXH/view?usp=sharing).
 

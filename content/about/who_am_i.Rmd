@@ -11,23 +11,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 My name is **Thomas Giannetti-Fakhoury**, I am 22 years old and I was born in Cannes in the South of France. I am both **French** and **Ivorian** and am also of ***Lebanese*** and ***Italian*** origin.
 
-### My education & my work.
+### My education & My Work.
 
-I studied:
+I studied Finance at **Bocconi University**, FinTech during a Summer Programme at **Oxford University**,Data Science at **Le Wagon** in London and am currently reading for the Masters in Analytics and Management at **London Business School**. 
 
-1.  Finance at **Bocconi University**
-2.  FinTech during a Summer Programme at **Oxford University**
-3.  Data Science at **Le Wagon** in London
+I worked as a financial analyst for **PFO Group**, a private equity analyst intern at **AfricInvest Group** and a TEDx Organiser with **TEDxTreichville**.
 
-
-![Education](/Users/thomasgiannetti/my_website/static/img/slide1.jpg)
-
-
-I worked: 
-
-1. As a Financial Analyst at **PFO Group**
-2. In Private Equity at **AfricInvest Group**
-3. As a TEDx Organiser with **TEDxTreichville**
-
-
-![Work](/Users/thomasgiannetti/my_website/static/img/slide2.jpg)
+```{r picture, echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics(c("/img/slide1.jpg", "/img/Slide2.jpg"), error = FALSE)
+```

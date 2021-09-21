@@ -10,4 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 It happens, although those remain rare one-time events, that my anger gets the best of me when I can't figure out a code. Here is my latest example, while building this website:
 
-![Computer 1](/Users/thomasgiannetti/my_website/static/img/im10.jpg)
+```{r picture, echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics("/img/im10.jpg", error = FALSE)
+```
+
+  
