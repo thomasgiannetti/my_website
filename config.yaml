@@ -77,21 +77,21 @@ params:
   image: ''
   name: Your name
   navigation:
-#    button1:
-#      - name: Get Started
-#         url: blogs
+    #button1:
+    #  - name: Home
+    #     url: homepage
     #button2:
      # - name: Log In
      #   url: '#'
-  #  links:
- #     - name: Home
-#        url: '#'
-#      - name: Blogs
-#        url: blogs
-#      - name: Generic Blog
-#        url: blogs/ipsum
-#      - name: Elements
-#        url: elements.html
+    links:
+      - name: Home
+        url: '#'
+      - name: Portfolio
+        url: portfolio
+      - name: About Me
+        url: about/who_am_i
+      - name: CV
+        url: cv/cv_tgf
 #    menu: Menu
     
     title: T.G.F.

@@ -15,3 +15,4 @@ knitr::include_graphics("/img/im10.jpg", error = FALSE)
 ```
 
   
+(This is a joke, of course, to display my great sense of humour as part of my portfolio.)
