@@ -1,7 +1,7 @@
 ---
 title: "Green Mood Tracker"
 date: 2019-05-12T12:14:34+06:00
-image: "im06.jpg"
+image: "im08.jpg"
 client: "John Doe"
 project_url : "https://themefisher.com/"
 categories: ["design"]
