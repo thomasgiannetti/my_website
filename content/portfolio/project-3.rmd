@@ -1,0 +1,55 @@
+---
+title: "Ask A Manager Survey"
+date: 2019-05-12T12:14:34+06:00
+image: "img/im06.jpg"
+client: "John Doe"
+project_url : "https://themefisher.com/"
+categories: ["illustration"]
+description: "R Project."
+draft: false
+---
+
+#### Project Overview
+
+The goal of this project was to observe the data from the 2021 Ask A Manager Survey and see what inferences could be made from it. What statistical analysis can be conducted to add value ? 
+We chose to look at the potential factors that influenced the salary of a US Manager. 
+
+```{r}
+library(tidyverse)
+
+#loading the dataset
+ask_a_manager_2021_cleaned <- read_csv(here::here("data", "ask_a_manager_2021_cleaned.csv"))
+
+#loading the libraries
+library(usmap)
+library(ggplot2)
+
+#cleaning the dataset to include data only from the US and cleaning the names in the State column
+ask_a_manager_states_clean <- ask_a_manager_2021_cleaned %>% 
+  filter(country == "United States") %>% 
+  rowwise() %>% 
+  mutate(state = str_split(state, ",")) %>% 
+  mutate(state = as.character(state[1]))
+
+#creating a new dataframe with the mean salaries for each state
+usmap_df <- ask_a_manager_states_clean %>% 
+  group_by(state) %>% 
+  summarise(median_salary = median(salary_usd, na.rm = TRUE)) 
+
+#plotting the data with a color code
+plot_usmap(regions = "state", data = usmap_df, values = "median_salary") + 
+  labs(title = "Median Salary by State in the United States of America",
+       subtitle = "Ask a Manager Survey 2021") + 
+  scale_fill_continuous(low = "white", 
+                        high = "red", 
+                        name = "Salary in US $", 
+                        label = scales::comma)+
+  theme(panel.background=element_blank(), legend.position = "right")
+
+```
+
+
+
+
+Find out more on our Github repository :
+https://github.com/thomasgiannetti/am01

@@ -1,0 +1,102 @@
+---
+title: "Opinion Polls for 2021 German Elections"
+date: 2019-05-12T12:14:34+06:00
+image: "/Users/thomasgiannetti/my_website/static/img/im05.jpg"
+client: "John Doe"
+project_url : "https://themefisher.com/"
+categories: ["design","development"]
+description: "R Project."
+draft: false
+---
+
+#### Project Overview
+
+The aim of this project was to use data from Wikipedia listing opinion polls for the German 2021 election and produce a graph to display the latest results.
+
+```{r}
+
+library(rvest)
+library(xml2)
+library(purrr)
+library(stringr)
+library(lubridate)
+library(tidyverse)
+
+
+
+url <- "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2021_German_federal_election"
+# https://www.economist.com/graphic-detail/who-will-succeed-angela-merkel
+# https://www.theguardian.com/world/2021/jun/21/german-election-poll-tracker-who-will-be-the-next-chancellor
+
+
+# get tables that exist on wikipedia page 
+tables <- url %>% 
+  read_html() %>% 
+  html_nodes(css="table")
+
+
+# parse HTML tables into a dataframe called polls 
+# Use purr::map() to create a list of all tables in URL
+polls <- map(tables, . %>% 
+             html_table(fill=TRUE)%>% 
+             janitor::clean_names())
+
+
+# list of opinion polls
+german_election_polls <- polls[[1]] %>% # the first table on the page contains the list of all opinions polls
+  slice(2:(n()-1)) %>%  # drop the first row, as it contains again the variable names and last row that contains 2017 results
+  mutate(
+         # polls are shown to run from-to, e.g. 9-13 Aug 2021. We keep the last date, 13 Aug here, as the poll date
+         # and we extract it by picking the last 11 characters from that field
+         end_date = str_sub(fieldwork_date, -11),
+         
+         # end_date is still a string, so we convert it into a date object using lubridate::dmy()
+         end_date = dmy(end_date),
+         
+         # we also get the month and week number from the date, if we want to do analysis by month- week, etc.
+         month = month(end_date),
+         week = isoweek(end_date)
+         )
+```
+
+```{r}
+library(plotly)
+library(ggplot2)
+```
+
+```{r}
+german_graph <- ggplot(german_election_polls, aes(x=end_date)) +
+      geom_smooth(aes(y=union), color="black", size=0.7, span=0.05, se=FALSE)+
+      geom_smooth(aes(y=spd), color="darkred", size=0.7, span=0.05, se=FALSE)+     
+      geom_smooth(aes(y=grune), color="darkgreen", size=0.7, span=0.105, se=FALSE)+
+      geom_smooth(aes(y=fdp), color="yellow", size=0.7, span=0.05, se=FALSE)+
+      geom_smooth(aes(y=af_d), color="darkblue",size=0.7, span=0.05, se=FALSE)+
+      geom_smooth(aes(y=linke), color="purple", size=0.7, span=0.05, se=FALSE) +
+      geom_point(aes(y = union), color = "black", size=0.5, alpha=0.3, show.legend = FALSE) +
+       geom_point(aes(y = spd), color = "darkred", size=0.5, alpha=0.3, show.legend = FALSE) +
+       geom_point(aes(y = grune), color="darkgreen", size=0.5, alpha=0.3, show.legend = FALSE) +
+       geom_point(aes(y= fdp), color="yellow", size=0.5, alpha=0.3, show.legend = FALSE) +
+       geom_point(aes(y= af_d), color="darkblue", size=0.5, alpha=0.3, show.legend = FALSE) +
+       geom_point(aes(y= linke), color="purple", size=0.5, alpha=0.3, show.legend = FALSE) +
+       labs(
+            title = "German Election Poll Tracker",
+            subtitle = "who will be the next Chancellor?",
+            x = "Date (last updated 3 Sep 2021)",
+            y = "Percent of Voter Population")+
+    theme_light()
+
+fig <- ggplotly(german_graph + ylim(5, 45))
+
+fig<- fig%>%
+  layout(hovermode = "x unified")
+
+fig <- style(fig, hoverinfo = "skip", traces = 7:13)
+
+
+fig
+```
+
+
+Find out more on our Github repository :
+https://github.com/thomasgiannetti/am01
+
