@@ -110,10 +110,10 @@ params:
         subtitle: My resumé
         title: CV
         url: /cv/cv_TGF
-     # - image: pic04.jpg
-     #   subtitle: Reach out to me
-      #  title: Contact
-     #   url: blogs/ipsum
+      - image: im09.jpg
+        subtitle: Additional Information About Me
+        title: Fun Fact
+        url: fun_fact
     
   #two:
   #  buttonText: Get Started

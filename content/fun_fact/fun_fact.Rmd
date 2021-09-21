@@ -1,0 +1,14 @@
+---
+title: "What Else ?"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### What Happens When I Code ?  
+
+It happens, although those remain rare one-time events, that my anger gets the best of me when I can't figure out a code. Here is my latest example, while building this website:
+
+![Computer 1](/Users/thomasgiannetti/my_website/static/img/im10.jpg)

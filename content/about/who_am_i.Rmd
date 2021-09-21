@@ -1,5 +1,5 @@
 ---
-title: "who_am_i"
+title: "Who Am I ?"
 author: "Thomas Giannetti-Fakhoury"
 output: html_document
 ---
@@ -8,7 +8,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Who am i?
 
 My name is **Thomas Giannetti-Fakhoury**, I am 22 years old and I was born in Cannes in the South of France. I am both **French** and **Ivorian** and am also of ***Lebanese*** and ***Italian*** origin.
 
