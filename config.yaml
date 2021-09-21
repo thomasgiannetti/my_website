@@ -113,7 +113,7 @@ params:
       - image: im09.jpg
         subtitle: Additional Information About Me
         title: Fun Fact
-        url: fun_fact
+        url: fun_fact/fun_fact
     
   #two:
   #  buttonText: Get Started

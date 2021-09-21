@@ -1,5 +1,5 @@
 ---
-title: "What Else ?"
+title: "What Happens When I Code ?"
 output: html_document
 ---
 
@@ -7,7 +7,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### What Happens When I Code ?  
 
 It happens, although those remain rare one-time events, that my anger gets the best of me when I can't figure out a code. Here is my latest example, while building this website:
 
